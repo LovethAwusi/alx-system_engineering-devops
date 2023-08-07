@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -not -name | wC -l
+shopt -s dotglob nullglob; count=$(find . -mindepth 1 -type d | wc -l); echo "Total number of directories and sub-directories: $count"
