@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(( $(echo $WATER | base64 -d | tr 'a-z' '0-9') + $(echo $STIR | base64 -d | tr 'a-z' '0-9') )) | base64 | tr '0-9' 'z-y' | tr 'a-z' 'A-Z'
